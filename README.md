@@ -1,4 +1,4 @@
-# verlet ![Stars](https://img.shields.io/github/stars/[realTristan/pyverlet](https://github.com/Simpson-Computer-Technologies-Research/pyverlet)?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/[realTristan/pyverlet](https://github.com/Simpson-Computer-Technologies-Research/pyverlet)?label=Watchers)
+# verlet ![Stars](https://img.shields.io/github/stars/Simpson-Computer-Technologies-Research/pyverlet?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/Simpson-Computer-Technologies-Research/pyverlet?label=Watchers)
 
 Verlet is a physics engine built from scratch.
 
