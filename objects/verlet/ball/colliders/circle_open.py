@@ -1,6 +1,6 @@
 import pygame
 from objects.verlet.ball.ball import VerletBall
-from physics import Vector2D
+from physics import Vec2D
 from .circle_collider import CircleCollider
 
 
@@ -33,7 +33,7 @@ class OpenCircleCollider(CircleCollider):
             return
         
         # Calculate the distance between the ball and the circle
-        dist: Vector2D = ball.current_position - self.position
+        dist: Vec2D = ball.current_position - self.position
         magnitude = dist.magnitude() + 1.0e-9
 
         # Check if the ball is outside the collider
@@ -43,7 +43,7 @@ class OpenCircleCollider(CircleCollider):
                 not self.inside_collision or magnitude > self.radius
             ):
                 # Calculate the ball overlap (the amount the balls have overlapped)
-                overlap: Vector2D = dist / magnitude
+                overlap: Vec2D = dist / magnitude
 
                 # Update this balls position (move it to the side)
                 ball.current_position += overlap * 0.5 * (rad_sum - magnitude)

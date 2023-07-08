@@ -1,4 +1,4 @@
-from physics import Vector2D
+from physics import Vec2D
 
 
 # Circle Collider class
@@ -9,6 +9,6 @@ class CircleCollider(object):
         radius: float = 200.0,
         color: tuple[int, int, int] = (255, 255, 255),
     ):
-        self.position: Vector2D = Vector2D(position[0], position[1])
+        self.position: Vec2D = Vec2D(position[0], position[1])
         self.radius: float = radius
         self.color: tuple[int, int, int] = color

@@ -1,5 +1,5 @@
 import pygame
-from physics import Vector2D
+from physics import Vec2D
 from .text import Text
 
 
@@ -14,7 +14,7 @@ class Button:
     ) -> None:
         self.width: int = width
         self.height: int = height
-        self.position: Vector2D = Vector2D(position[0], position[1])
+        self.position: Vec2D = Vec2D(position[0], position[1])
         self.color: tuple[int, int, int] = color
         self.text: str = text
 

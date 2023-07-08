@@ -1,5 +1,5 @@
 from testing.config import WIDTH, HEIGHT
-from physics import Vector2D
+from physics import Vec2D
 from typing import Any
 from .cell import Cell
 from utils import Threads
@@ -35,7 +35,7 @@ class Grid():
         return self.grid[y][x]
 
     # Get the cell index from a position
-    def calculate_cell_index(self, position: Vector2D) -> tuple[int, int]:
+    def calculate_cell_index(self, position: Vec2D) -> tuple[int, int]:
         return (int(position.x // self.cell_size), int(position.y // self.cell_size))
 
     # Put an object into the grid

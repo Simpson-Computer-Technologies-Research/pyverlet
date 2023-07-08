@@ -1,5 +1,5 @@
 from interface.components.button import Button
-from physics import Vector2D
+from physics import Vec2D
 import pygame
 
 class Menu:

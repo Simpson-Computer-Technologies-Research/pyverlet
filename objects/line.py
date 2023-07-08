@@ -1,4 +1,4 @@
-from physics import Vector2D
+from physics import Vec2D
 import math, pygame
 
 
@@ -12,19 +12,19 @@ class Line(object):
         width: int = 1,
         color: tuple[int, int, int] = (255, 255, 255),
     ) -> None:
-        self.start: Vector2D = Vector2D(start[0], start[1])
+        self.start: Vec2D = Vec2D(start[0], start[1])
         self.length: float = length
         self.angle: float = angle
         self.width: int = width
         self.color: tuple[int, int, int] = color
-        self.end: Vector2D = self.calculate_end()
+        self.end: Vec2D = self.calculate_end()
 
     # Calculate the end
-    def calculate_end(self) -> Vector2D:
+    def calculate_end(self) -> Vec2D:
         degree: float = math.sin(math.radians(self.angle))
         x: float = self.start.x + self.length
         y: float = self.start.y + self.length * degree
-        return Vector2D(x, y)
+        return Vec2D(x, y)
 
     # Set the line angle
     def set_angle(self, angle: float) -> None:

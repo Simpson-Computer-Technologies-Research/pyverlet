@@ -1,4 +1,4 @@
-from .vector2d import Vector2D
+from .vector2d import Vec2D
 
 # Gravity constant
-GRAVITY: Vector2D = Vector2D(0.0, 9.81)
+GRAVITY: Vec2D = Vec2D(0.0, 9.81)

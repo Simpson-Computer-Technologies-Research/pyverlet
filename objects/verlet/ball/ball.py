@@ -1,4 +1,4 @@
-from physics import Vector2D, GRAVITY
+from physics import Vec2D, GRAVITY
 from objects.verlet.object import VerletObject
 #from grid import Grid, Cell
 import pygame
@@ -38,14 +38,14 @@ class VerletBall(VerletObject):
     # Check if the ball is colliding with another ball
     def handle_collision(self, other_ball: 'VerletBall') -> None:
         # Calculate the distance between the balls
-        dist: Vector2D = self.current_position - other_ball.current_position
+        dist: Vec2D = self.current_position - other_ball.current_position
         
         # the vector magnitude of the ball
         magnitude: float = dist.magnitude() + 1.0e-9
         rad_sum: float = self.radius + other_ball.radius
         if magnitude < rad_sum:
             # Calculate the ball overlap (the amount the balls have overlapped)
-            overlap: Vector2D = dist / magnitude
+            overlap: Vec2D = dist / magnitude
 
             # Update this balls position (move it to the side)
             self.current_position += overlap * 0.5 * (rad_sum - magnitude)
